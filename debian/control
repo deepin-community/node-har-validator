@@ -1,0 +1,31 @@
+Source: node-har-validator
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Pirate Praveen <praveen@debian.org>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+ , dh-sequence-nodejs
+ , node-ajv (>= 6.5.5~) <!nocheck>
+ , node-har-schema <!nocheck>
+ , node-tap <!nocheck>
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-har-validator
+Vcs-Git: https://salsa.debian.org/js-team/node-har-validator.git
+Homepage: https://github.com/ahmadnassri/har-validator
+Rules-Requires-Root: no
+
+Package: node-har-validator
+Architecture: all
+Depends: ${misc:Depends}
+ , node-ajv (>= 6.5.5)
+ , node-har-schema
+Description: Extremely fast HTTP Archive (HAR) validator using JSON Schema
+ HTTP Archive (HAR) format defines an archival format for HTTP transactions
+ that can be used by a web browser to export detailed performance data about
+ web pages it loads.
+ .
+ This library is a dependency of request, the simplest way possible to make
+ http calls.
+ .
+ Node.js is an event-based server-side JavaScript engine.
